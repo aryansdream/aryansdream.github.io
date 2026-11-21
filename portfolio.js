@@ -20,23 +20,23 @@ if (context) {
     }
   }
 
-  box(0, .55, 0, 4.8, .13, 2.45, '#c8ea70', 670);
+  box(0, .55, 0, 4.8, .13, 2.45, '#d2d2d2', 670);
   for (const x of [-2.09, 2.09]) {
-    for (const z of [-.95, .95]) box(x, -.04, z, .13, 1.14, .13, '#7a9a77', 79);
+    for (const z of [-.95, .95]) box(x, -.04, z, .13, 1.14, .13, '#8b8b8b', 79);
   }
-  box(-.64, .65, -.10, 1.6, .08, 1.13, '#e6ffd7', 245);
-  box(-.64, 1.24, .43, 1.6, 1.12, .08, '#dff86c', 360);
-  box(-.64, 1.24, .37, 1.44, .96, .015, '#69bbb3', 290);
+  box(-.64, .65, -.10, 1.6, .08, 1.13, '#f2f2f2', 245);
+  box(-.64, 1.24, .43, 1.6, 1.12, .08, '#eeeeee', 360);
+  box(-.64, 1.24, .37, 1.44, .96, .015, '#aaaaaa', 290);
   for (let y = 0; y < 4; y++) {
-    for (let x = 0; x < 10; x++) box(-1.23 + x * .127, .707, -.33 + y * .116, .085, .016, .075, '#91c2b4', 7);
+    for (let x = 0; x < 10; x++) box(-1.23 + x * .127, .707, -.33 + y * .116, .085, .016, .075, '#b5b5b5', 7);
   }
-  box(.91, .64, -.5, .99, .035, .71, '#e0cbb2', 190);
-  box(1.13, .70, -.59, .59, .027, .027, '#ffff99', 41);
-  box(1.48, .78, .57, .42, .35, .42, '#d8ae85', 120);
+  box(.91, .64, -.5, .99, .035, .71, '#d5d5d5', 190);
+  box(1.13, .70, -.59, .59, .027, .027, '#ffffff', 41);
+  box(1.48, .78, .57, .42, .35, .42, '#a3a3a3', 120);
   for (let i = 0; i < 125; i++) {
     const angle = random() * Math.PI * 2;
     const radius = .15 + random() * .4;
-    points.push([1.48 + Math.cos(angle) * radius, 1.02 + random() * .4, .57 + Math.sin(angle) * radius, '#a8ed85', .9]);
+    points.push([1.48 + Math.cos(angle) * radius, 1.02 + random() * .4, .57 + Math.sin(angle) * radius, '#d8d8d8', .9]);
   }
 
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
@@ -72,7 +72,7 @@ if (context) {
               height * .52 - (y * up + depth * tilt) * scale * magnify, distance];
     }
 
-    context.strokeStyle = '#98ba8c2c';
+    context.strokeStyle = '#bbbbbb2c';
     context.lineWidth = 1;
     context.beginPath();
     for (let i = -4; i <= 4; i++) {

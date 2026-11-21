@@ -5,14 +5,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
 
 <title>Dodge + Coins</title>
+<script src="theme.js"></script>
 
 <style>
 
 /* ================= CLEAN MODERN UI ================= */
 
+:root {
+  color-scheme: dark;
+  --ground: #111;
+  --panel: #222;
+  --field: #141414;
+  --text: #eee;
+  --button: #eee;
+  --button-text: #151515;
+}
+[data-theme="light"] {
+  color-scheme: light;
+  --ground: #e8e8e8;
+  --panel: #fff;
+  --field: #191919;
+  --text: #161616;
+  --button: #161616;
+  --button-text: #fff;
+}
+
 body{
   margin:0;
-  background:#e8e6e1;
+  background:var(--ground);
+  color:var(--text);
   display:flex;
   justify-content:center;
   align-items:center;
@@ -22,7 +43,7 @@ body{
 }
 
 .game-box{
-  background:#fff;
+  background:var(--panel);
   padding:22px;
   border-radius:22px;
   box-shadow:0 15px 40px rgba(0,0,0,.12);
@@ -31,7 +52,7 @@ body{
 }
 
 canvas{
-  background:#fafafa;
+  background:var(--field);
   border-radius:14px;
   box-shadow:0 6px 20px rgba(0,0,0,.08);
   width:90vw;
@@ -43,14 +64,14 @@ canvas{
 .info{
   margin-top:8px;
   font-size:14px;
-  color:#666;
+  color:var(--text);
 }
 
 .btn{
   margin-top:10px;
   padding:8px 18px;
-  background:#ff7a18;
-  color:white;
+  background:var(--button);
+  color:var(--button-text);
   border:none;
   border-radius:18px;
   cursor:pointer;
@@ -69,11 +90,11 @@ canvas{
   width:65px;
   height:65px;
   font-size:26px;
-  background:#ff7a18;
-  color:white;
+  background:var(--button);
+  color:var(--button-text);
   border:none;
   border-radius:18px;
-  box-shadow:0 6px 16px rgba(255,122,24,.3);
+  box-shadow:0 6px 16px rgba(0,0,0,.3);
 }
 
 .ctrl-btn:active{
@@ -91,13 +112,13 @@ canvas{
 
 <div class="game-box">
 
-  <h2>🎮 Dodge + Coins</h2>
+  <h2>Dodge + Coins</h2>
 
   <canvas id="game" width="400" height="500"></canvas>
 
   <div class="info">
     Score: <span id="score">0</span> |
-    ❤️ <span id="lives">3</span>
+    Lives: <span id="lives">3</span>
   </div>
 
   <button class="btn" onclick="restart()">Restart</button>
@@ -213,13 +234,13 @@ function update(){
 
   player.x = Math.max(0, Math.min(canvas.width-player.w, player.x));
 
-  rect(player,"#ff7a18");
+  rect(player,"#fafafa");
 
 
   /* blocks */
   blocks.forEach(b=>{
     b.y+=speed;
-    rect(b,"#333");
+    rect(b,"#8b8b8b");
 
     if(hit(player,b)){
       lives--;
@@ -238,7 +259,7 @@ function update(){
   coins.forEach(c=>{
     c.y+=speed;
 
-    ctx.fillStyle="#f5b301";
+    ctx.fillStyle="#e6e6e6";
     ctx.beginPath();
     ctx.arc(c.x+7,c.y+7,7,0,6.28);
     ctx.fill();
