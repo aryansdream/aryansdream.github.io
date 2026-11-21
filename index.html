@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Aryan Tiwari’s portfolio. Selected work in web development, local 3D reconstruction, and network systems.">
-  <meta name="theme-color" content="#14121a">
+  <meta name="description" content="Aryan Tiwari’s portfolio of web apps, 3D reconstruction, and network systems.">
+  <meta name="theme-color" content="#efede3">
   <title>Aryan Tiwari · Developer Portfolio</title>
   <link rel="stylesheet" href="styles.css">
   <script src="portfolio.js" defer></script>
@@ -12,102 +12,60 @@
 <body id="top">
   <a class="skip" href="#main">Skip to content</a>
   <header class="shell topbar">
-    <a class="brand" href="#top" aria-label="Aryan Tiwari, home"><span aria-hidden="true">AT</span><strong>Aryan Tiwari</strong></a>
-    <nav aria-label="Main navigation">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a class="nav-contact" href="#contact">Contact</a>
-    </nav>
+    <a class="identity" href="#top" aria-label="Aryan Tiwari, home">AT<span>.</span></a>
+    <span class="location">Bengaluru, India</span>
+    <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
   </header>
-
   <main id="main">
-    <section class="shell hero" aria-labelledby="intro-title">
+    <section class="shell hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow">Developer · B.Tech student</p>
-        <h1 id="intro-title">Aryan<br><span>Tiwari</span></h1>
-        <p class="intro">I build web apps and explore how software can reconstruct 3D scenes, connect devices, and make complex systems easier to use.</p>
-        <div class="actions">
-          <a class="button primary" href="#work">Explore my work</a>
-          <a class="button secondary" href="https://github.com/aryansdream">GitHub</a>
-        </div>
+        <p class="meta">Software developer · B.Tech student</p>
+        <h1 id="hero-title">Aryan<br>Tiwari<span>.</span></h1>
+        <p class="intro">I build web apps and explore 3D reconstruction and network systems.</p>
+        <a class="action" href="#work">Browse projects</a>
       </div>
-      <figure class="portrait">
-        <div class="portrait-stage"><img src="assets/portrait.webp" alt="Portrait of Aryan Tiwari" width="500" height="500" fetchpriority="high"></div>
-        <figcaption><span>Bengaluru, India</span><span>PES University</span></figcaption>
+      <figure class="model">
+        <div class="model-bar"><span class="meta">Point cloud study</span><button id="motion" type="button" hidden>Pause rotation</button></div>
+        <canvas id="desk-cloud" role="img" tabindex="0" aria-label="Interactive point cloud illustration of a desk with a laptop, notebook, and plant"></canvas>
+        <figcaption class="model-bar"><span>Drag or use arrow keys</span><a href="https://aryansdream.github.io/scene-rebuilder/">See the real reconstructions</a></figcaption>
       </figure>
     </section>
 
-    <section class="shell projects" id="work" aria-labelledby="work-title">
-      <div class="section-heading">
-        <h2 id="work-title">Selected work</h2>
-        <a class="text-link" href="https://github.com/aryansdream?tab=repositories">All repositories</a>
+    <section class="shell work" id="work" aria-labelledby="work-title">
+      <div class="section-head"><h2 id="work-title">Selected work</h2><a href="https://github.com/aryansdream?tab=repositories">All repositories</a></div>
+      <div class="project-index">
+        <details name="projects" open>
+          <summary><span class="project-title">Aura</span><span class="meta category">Web app</span><span class="toggle" aria-hidden="true"></span></summary>
+          <div class="project-detail"><p>A family of focus apps for daily planning, campus, and desktop. The daily planner includes searchable activities, missions, and a focus timer.</p><div class="project-links"><a href="https://aura-day-tracker.vercel.app/">Open Aura</a><a href="https://github.com/aryansdream/Aura">Source code</a></div></div>
+        </details>
+        <details name="projects">
+          <summary><span class="project-title">Scene Rebuilder</span><span class="meta category">3D reconstruction</span><span class="toggle" aria-hidden="true"></span></summary>
+          <div class="project-detail"><p>A Windows app that reconstructs scenes from photos and video. I started with textured meshes and local object detection, then added GPU Gaussian splats to capture the whole scene.</p><div class="project-links"><a href="https://aryansdream.github.io/scene-rebuilder/">Explore both 3D scenes</a><a href="https://github.com/aryansdream/scene-rebuilder">Source code</a></div></div>
+        </details>
+        <details name="projects">
+          <summary><span class="project-title">DigiChhath</span><span class="meta category">Cultural guide</span><span class="toggle" aria-hidden="true"></span></summary>
+          <div class="project-detail"><p>A guide to the four days of Chhath Puja, with the rituals, preparations, and prayers in one place.</p><div class="project-links"><a href="https://digichhath.vercel.app/">Open DigiChhath</a></div></div>
+        </details>
+        <details name="projects">
+          <summary><span class="project-title">Only Yours</span><span class="meta category">Messaging experiment</span><span class="toggle" aria-hidden="true"></span></summary>
+          <div class="project-detail"><p>An experimental two-person messenger with a browser app and an Android host, media sharing, and voice and video calls.</p><div class="project-links"><a href="https://github.com/aryansdream/only-yours">Source code</a></div></div>
+        </details>
       </div>
-      <div class="project-grid">
-        <article class="project aura">
-          <a class="project-visual" href="https://aura-day-tracker.vercel.app/" aria-label="Open Aura"><img src="assets/aura.webp" alt="Aura’s daily planning and focus app" width="1160" height="750" loading="lazy"></a>
-          <div class="project-copy">
-            <p class="category">Web app</p><h3>Aura</h3>
-            <p>A family of focus apps for daily planning, campus, and desktop. The daily planner includes searchable activities, missions, and a focus timer.</p>
-            <div class="project-links"><a href="https://aura-day-tracker.vercel.app/">Open Aura</a><a href="https://github.com/aryansdream/Aura">Source code</a></div>
-          </div>
-        </article>
-
-        <article class="project scene">
-          <div class="project-visual comparison" id="scene-comparison">
-            <img src="assets/desk-rebuilt.webp" alt="Gaussian splat reconstruction of the synthetic desk" width="840" height="630" loading="lazy">
-            <img class="reference" src="assets/desk-reference.webp" alt="Input image of the same synthetic desk" width="840" height="630" loading="lazy">
-            <div class="comparison-line" aria-hidden="true"></div>
-            <span class="comparison-label input-label">Input photo</span><span class="comparison-label result-label">Gaussian splat</span>
-            <input id="comparison-slider" type="range" min="0" max="100" value="50" aria-label="Amount of the desk input photo to reveal">
-          </div>
-          <div class="project-copy">
-            <p class="category">3D reconstruction</p><h3>Scene Rebuilder</h3>
-            <p>A local app that turns photos and video into interactive 3D scenes. I started with object detection and textured meshes, then added GPU Gaussian splatting.</p>
-            <div class="project-links"><a href="https://aryansdream.github.io/scene-rebuilder/">Explore both scenes</a><a href="https://github.com/aryansdream/scene-rebuilder">Source code</a></div>
-          </div>
-        </article>
-
-        <article class="project digichhath">
-          <a class="project-visual" href="https://digichhath.vercel.app/" aria-label="Open DigiChhath"><img src="assets/digichhath.webp" alt="The DigiChhath web experience for Chhath Puja" width="1160" height="750" loading="lazy"></a>
-          <div class="project-copy">
-            <p class="category">Cultural guide</p><h3>DigiChhath</h3>
-            <p>A guide to the four-day Chhath Puja journey, with the rituals, offering preparation, and prayers in one place.</p>
-            <div class="project-links"><a href="https://digichhath.vercel.app/">Open DigiChhath</a></div>
-          </div>
-        </article>
-
-        <article class="project only-yours">
-          <a class="project-visual message-art" href="https://github.com/aryansdream/only-yours" aria-label="Open the Only Yours repository"><span class="bubble first" aria-hidden="true"></span><span class="bubble second" aria-hidden="true"></span></a>
-          <div class="project-copy">
-            <p class="category">Messaging experiment</p><h3>Only Yours</h3>
-            <p>An experimental two-person messenger with browser and Android clients, media sharing, and voice and video calls.</p>
-            <div class="project-links"><a href="https://github.com/aryansdream/only-yours">Source code</a></div>
-          </div>
-        </article>
-      </div>
-      <div class="more-work" aria-label="More projects">
-        <a href="https://github.com/aryansdream/NIDR"><strong>NIDR</strong><span>A lab for network intrusion detection and response</span></a>
-        <a href="https://github.com/aryansdream/BookYourHostel"><strong>Book Your Hostel</strong><span>Hostel discovery and booking</span></a>
-      </div>
+      <div class="more"><a href="https://github.com/aryansdream/NIDR">NIDR <span>Network intrusion detection lab</span></a><a href="https://github.com/aryansdream/BookYourHostel">Book Your Hostel <span>Hostel discovery and booking</span></a></div>
     </section>
 
     <section class="about" id="about" aria-labelledby="about-title">
       <div class="shell about-grid">
-        <div><h2 id="about-title">About me</h2><p>I’m a B.Tech student at PES University in Bengaluru. I like following projects through the whole stack, from the interface people use to the code that handles data, communicates over a network, or runs a model locally.</p></div>
-        <dl class="toolkit">
-          <div><dt>Web development</dt><dd>TypeScript, Next.js, FastAPI, PostgreSQL</dd></div>
-          <div><dt>3D reconstruction</dt><dd>Python, COLMAP, Blender, Gaussian splatting</dd></div>
-          <div><dt>Network systems</dt><dd>Mininet, Ryu, OpenFlow</dd></div>
-        </dl>
+        <div><h2 id="about-title">About me</h2><p>I’m a B.Tech student at PES University in Bengaluru. I enjoy building the interface people use and the systems behind it, whether that means running a model locally or seeing how a network responds under load.</p></div>
+        <dl><div><dt>Web development</dt><dd>TypeScript, Next.js, FastAPI, PostgreSQL</dd></div><div><dt>3D reconstruction</dt><dd>Python, COLMAP, Blender, Gaussian splatting</dd></div><div><dt>Network systems</dt><dd>Mininet, Ryu, OpenFlow</dd></div></dl>
       </div>
     </section>
 
     <section class="shell contact" id="contact" aria-labelledby="contact-title">
-      <div><h2 id="contact-title">Let’s get in touch.</h2><p>Reach out about a project, collaboration, or opportunity.</p></div>
-      <div class="actions"><a class="button primary" href="mailto:aryantiwari90605@gmail.com">Email me</a><a class="button secondary" href="https://www.linkedin.com/in/aryan-tiwari-884906281/">LinkedIn</a></div>
+      <h2 id="contact-title">Let’s talk.</h2>
+      <div class="contact-links"><a class="action" href="mailto:aryantiwari90605@gmail.com">Email me</a><a href="https://www.linkedin.com/in/aryan-tiwari-884906281/">LinkedIn</a><a href="https://github.com/aryansdream">GitHub</a></div>
     </section>
   </main>
-
   <footer class="shell footer"><span>Aryan Tiwari</span><div><a href="game.html">Browser game</a><a href="#top">Back to top</a></div></footer>
 </body>
 </html>
