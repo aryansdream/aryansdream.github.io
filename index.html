@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#111111">
   <title>Aryan Tiwari · Developer Portfolio</title>
   <script src="theme.js"></script>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=work-gallery">
   <script src="portfolio.js" defer></script>
 </head>
 <body id="top">
@@ -34,25 +34,52 @@
 
     <section class="shell work" id="work" aria-labelledby="work-title">
       <div class="section-head"><h2 id="work-title">Selected work</h2></div>
-      <div class="project-index">
-        <details name="projects" open>
-          <summary><span class="project-title">Aura</span><span class="meta category">Android &amp; desktop ecosystem</span><span class="toggle" aria-hidden="true"></span></summary>
-          <div class="project-detail"><p>A connected productivity project with three apps. <strong>Aura</strong> handles daily missions, focus sessions, and verified progress on Android. <strong>Aura PES</strong> brings PES University timetables, attendance, and bunk planning into a campus app. <strong>Aura Sync</strong> connects Android focus sessions with Windows and Linux desktops.</p><div class="project-links"><a href="https://aura-day-tracker.vercel.app/">Explore the Aura ecosystem</a></div></div>
-        </details>
-        <details name="projects">
-          <summary><span class="project-title">Scene Rebuilder</span><span class="meta category">3D reconstruction</span><span class="toggle" aria-hidden="true"></span></summary>
-          <div class="project-detail"><div><p>A local Windows app that reconstructs scenes from photos, video, or both. I started with textured meshes and YOLOX object detection, then used COLMAP and Brush to train Gaussian splats on the GPU.</p><p class="project-note">The gallery compares a real desk capture with a synthetic one. Both include interactive viewers, input photos, and model downloads.</p></div><div class="project-links"><a href="https://aryansdream.github.io/scene-rebuilder/">Explore both 3D scenes</a></div></div>
-        </details>
-        <details name="projects">
-          <summary><span class="project-title">DigiChhath</span><span class="meta category">Cultural guide</span><span class="toggle" aria-hidden="true"></span></summary>
-          <div class="project-detail"><p>An English and Hindi guide to the four days of Chhath Puja, from Nahay-Khay to Usha Arghya. It brings together the ritual timeline, offering preparations, and a prayer wall.</p><div class="project-links"><a href="https://digichhath.vercel.app/">Open DigiChhath</a></div></div>
-        </details>
-        <details name="projects">
-          <summary><span class="project-title">Only Yours</span><span class="meta category">Android messenger for couples</span><span class="toggle" aria-hidden="true"></span></summary>
-          <div class="project-detail"><div><p>An Android messenger built for couples, with end-to-end encrypted messaging and direct WebRTC communication. An encrypted relay delivers messages if one partner is offline.</p><p class="project-note">Pairing codes, a password-protected vault, and view-once or disappearing messages give couples privacy controls. Reactions and playful animations make room for the fun parts of staying in touch.</p></div><div class="project-links"><a href="https://only-yours-app-private.vercel.app/install">Only Yours for Android</a></div></div>
-        </details>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-media"><img src="assets/work-aura.webp" alt="Aura’s ecosystem website with Android, desktop, and campus apps" width="1008" height="630" loading="lazy" decoding="async"></div>
+          <div class="project-content">
+            <p class="meta project-category">Android &amp; desktop ecosystem</p>
+            <h3 class="project-title">Aura</h3>
+            <p>Three connected productivity apps. Aura tracks daily missions, focus sessions, and verified progress. Aura PES handles timetables, attendance, and bunk planning. Aura Sync connects Android sessions to Windows and Linux.</p>
+          </div>
+          <a class="project-link" href="https://aura-day-tracker.vercel.app/">Explore the Aura ecosystem <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="project-card">
+          <div class="project-media project-media-comparison"><img src="assets/work-scene.webp" alt="A reference photo of a desk beside its Gaussian splat reconstruction" width="1328" height="556" loading="lazy" decoding="async"></div>
+          <div class="project-content">
+            <p class="meta project-category">3D reconstruction</p>
+            <h3 class="project-title">Scene Rebuilder</h3>
+            <p>A local Windows app that turns photos and video into 3D scenes. I developed the pipeline from textured meshes and YOLOX object detection to GPU-trained Gaussian splats with COLMAP and Brush.</p>
+            <p>The gallery includes real and synthetic desk captures, input photos, and downloadable models.</p>
+          </div>
+          <a class="project-link" href="https://aryansdream.github.io/scene-rebuilder/">Open the interactive 3D gallery <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="project-card">
+          <div class="project-media"><img src="assets/work-digichhath.webp" alt="DigiChhath homepage with an image of the festival and a countdown" width="1008" height="630" loading="lazy" decoding="async"></div>
+          <div class="project-content">
+            <p class="meta project-category">Bilingual cultural guide</p>
+            <h3 class="project-title">DigiChhath</h3>
+            <p>An English and Hindi guide to the four days of Chhath Puja, from Nahay-Khay to Usha Arghya. It brings together the ritual timeline, offering preparations, and a prayer wall.</p>
+          </div>
+          <a class="project-link" href="https://digichhath.vercel.app/">Open DigiChhath <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="project-card">
+          <div class="project-media"><img src="assets/work-only-yours.webp" alt="Only Yours landing page with its Android install button" width="1008" height="630" loading="lazy" decoding="async"></div>
+          <div class="project-content">
+            <p class="meta project-category">Android messenger for couples</p>
+            <h3 class="project-title">Only Yours</h3>
+            <p>End-to-end encrypted messaging for couples with direct WebRTC communication and an encrypted relay for offline delivery. Pairing codes, a protected vault, and disappearing messages support privacy, while reactions and animations keep it playful.</p>
+          </div>
+          <a class="project-link" href="https://only-yours-app-private.vercel.app/install">Get Only Yours for Android <span aria-hidden="true">↗</span></a>
+        </article>
       </div>
-      <div class="more"><div><strong>NIDR</strong><p>An SDN lab prototype that detects abnormal TCP traffic in Mininet and responds through OpenFlow. The original project is credited to Rishon-P.</p></div><div><strong>Book Your Hostel</strong><p>A PHP and MySQL app for finding and booking hostels, with separate user and admin workflows.</p></div></div>
+      <section class="more-work" aria-labelledby="more-work-title">
+        <h3 id="more-work-title">Other projects</h3>
+        <div class="more">
+          <article><h4>NIDR</h4><p>An SDN lab prototype that detects abnormal TCP traffic in Mininet and responds through OpenFlow. The original project is credited to Rishon-P.</p></article>
+          <article><h4>Book Your Hostel</h4><p>A PHP and MySQL app for finding and booking hostels, with separate user and admin workflows.</p></article>
+        </div>
+      </section>
     </section>
 
     <section class="about" id="about" aria-labelledby="about-title">
