@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Aryan Tiwari’s portfolio of web apps, 3D reconstruction, and network systems.">
-  <meta name="theme-color" content="#efede3">
+  <meta name="theme-color" content="#131712">
   <title>Aryan Tiwari · Developer Portfolio</title>
+  <script src="theme.js"></script>
   <link rel="stylesheet" href="styles.css">
   <script src="portfolio.js" defer></script>
 </head>
@@ -14,7 +15,7 @@
   <header class="shell topbar">
     <a class="identity" href="#top" aria-label="Aryan Tiwari, home">AT<span>.</span></a>
     <span class="location">Bengaluru, India</span>
-    <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    <nav aria-label="Main navigation"><a href="#work">Work</a><a href="bio.html">Bio</a><a href="#contact">Contact</a></nav>
   </header>
   <main id="main">
     <section class="shell hero" aria-labelledby="hero-title">
@@ -35,29 +36,29 @@
       <div class="section-head"><h2 id="work-title">Selected work</h2><a href="https://github.com/aryansdream?tab=repositories">All repositories</a></div>
       <div class="project-index">
         <details name="projects" open>
-          <summary><span class="project-title">Aura</span><span class="meta category">Web app</span><span class="toggle" aria-hidden="true"></span></summary>
-          <div class="project-detail"><p>A family of focus apps for daily planning, campus, and desktop. The daily planner includes searchable activities, missions, and a focus timer.</p><div class="project-links"><a href="https://aura-day-tracker.vercel.app/">Open Aura</a><a href="https://github.com/aryansdream/Aura">Source code</a></div></div>
+          <summary><span class="project-title">Aura</span><span class="meta category">Android &amp; desktop ecosystem</span><span class="toggle" aria-hidden="true"></span></summary>
+          <div class="project-detail"><div><p>A connected productivity project with three apps. <strong>Aura</strong> handles daily missions, focus sessions, and verified progress on Android. <strong>Aura PES</strong> brings PES University timetables, attendance, and bunk planning into a campus app. <strong>Aura Sync</strong> connects Android focus sessions with Windows and Linux desktops.</p></div><div class="project-links"><a href="https://aura-day-tracker.vercel.app/">Explore the Aura ecosystem</a><a href="https://github.com/aryansdream/Aura">Source code</a></div></div>
         </details>
         <details name="projects">
           <summary><span class="project-title">Scene Rebuilder</span><span class="meta category">3D reconstruction</span><span class="toggle" aria-hidden="true"></span></summary>
-          <div class="project-detail"><p>A Windows app that reconstructs scenes from photos and video. I started with textured meshes and local object detection, then added GPU Gaussian splats to capture the whole scene.</p><div class="project-links"><a href="https://aryansdream.github.io/scene-rebuilder/">Explore both 3D scenes</a><a href="https://github.com/aryansdream/scene-rebuilder">Source code</a></div></div>
+          <div class="project-detail"><div><p>A local Windows app that reconstructs scenes from photos, video, or both. I started with textured meshes and YOLOX object detection, then used COLMAP and Brush to train Gaussian splats on the GPU.</p><p class="project-note">The gallery compares a real desk capture with a synthetic one. Both include interactive viewers, input photos, and model downloads.</p></div><div class="project-links"><a href="https://aryansdream.github.io/scene-rebuilder/">Explore both 3D scenes</a><a href="https://github.com/aryansdream/scene-rebuilder">Source code</a></div></div>
         </details>
         <details name="projects">
           <summary><span class="project-title">DigiChhath</span><span class="meta category">Cultural guide</span><span class="toggle" aria-hidden="true"></span></summary>
-          <div class="project-detail"><p>A guide to the four days of Chhath Puja, with the rituals, preparations, and prayers in one place.</p><div class="project-links"><a href="https://digichhath.vercel.app/">Open DigiChhath</a></div></div>
+          <div class="project-detail"><p>An English and Hindi guide to the four days of Chhath Puja, from Nahay-Khay to Usha Arghya. It brings together the ritual timeline, offering preparations, and a prayer wall.</p><div class="project-links"><a href="https://digichhath.vercel.app/">Open DigiChhath</a></div></div>
         </details>
         <details name="projects">
-          <summary><span class="project-title">Only Yours</span><span class="meta category">Messaging experiment</span><span class="toggle" aria-hidden="true"></span></summary>
-          <div class="project-detail"><p>An experimental two-person messenger with a browser app and an Android host, media sharing, and voice and video calls.</p><div class="project-links"><a href="https://github.com/aryansdream/only-yours">Source code</a></div></div>
+          <summary><span class="project-title">Only Yours</span><span class="meta category">Android messaging app</span><span class="toggle" aria-hidden="true"></span></summary>
+          <div class="project-detail"><p>An experimental Android app for two-person messaging. Pairing codes connect two phones for text, media, and voice or video calls. It includes local message history and device backups, and uses WebRTC for direct messages with an offline relay when a phone is unavailable.</p><div class="project-links"><a href="https://github.com/aryansdream/only-yours">Android source and setup</a></div></div>
         </details>
       </div>
-      <div class="more"><a href="https://github.com/aryansdream/NIDR">NIDR <span>Network intrusion detection lab</span></a><a href="https://github.com/aryansdream/BookYourHostel">Book Your Hostel <span>Hostel discovery and booking</span></a></div>
+      <div class="more"><div><a href="https://github.com/aryansdream/NIDR">NIDR</a><p>An SDN lab prototype that detects abnormal TCP traffic in Mininet and responds through OpenFlow. <a href="https://github.com/Rishon-P/Network-Intrusion-Detection-and-Response">Original project credit</a>.</p></div><div><a href="https://github.com/aryansdream/BookYourHostel">Book Your Hostel</a><p>A PHP and MySQL app for finding and booking hostels, with separate user and admin workflows.</p></div></div>
     </section>
 
     <section class="about" id="about" aria-labelledby="about-title">
-      <div class="shell about-grid">
-        <div><h2 id="about-title">About me</h2><p>I’m a B.Tech student at PES University in Bengaluru. I enjoy building the interface people use and the systems behind it, whether that means running a model locally or seeing how a network responds under load.</p></div>
-        <dl><div><dt>Web development</dt><dd>TypeScript, Next.js, FastAPI, PostgreSQL</dd></div><div><dt>3D reconstruction</dt><dd>Python, COLMAP, Blender, Gaussian splatting</dd></div><div><dt>Network systems</dt><dd>Mininet, Ryu, OpenFlow</dd></div></dl>
+      <div class="shell about-teaser">
+        <div><h2 id="about-title">About me</h2><p>I’m a B.Tech student at PES University in Bengaluru, interested in how the interface and the systems behind it work together.</p></div>
+        <a class="action" href="bio.html">Read my bio</a>
       </div>
     </section>
 
