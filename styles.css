@@ -106,13 +106,12 @@ details[open] .toggle::before { content: '−'; }
 .theme-picker button { padding: .4rem .65rem; border: 0; border-radius: .15rem; background: none; color: var(--ink); font-weight: 750; cursor: pointer; }
 .theme-picker button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
 .theme-picker button:focus-visible { outline-offset: 0; }
-.bio-cover { display: grid; grid-template-columns: minmax(0, .79fr) minmax(0, 1.21fr); align-items: stretch; overflow: hidden; border: 1px solid var(--line); border-radius: .28rem; color: #f3f3f3; background: #161616; }
+.bio-cover { display: grid; grid-template-columns: minmax(0, .6fr) minmax(0, 1.4fr); align-items: stretch; overflow: hidden; border: 1px solid var(--line); border-radius: .28rem; color: #f3f3f3; background: #161616; }
 .bio-cover figcaption { display: flex; align-items: flex-start; flex-direction: column; justify-content: space-between; gap: 1rem; padding: clamp(1.25rem, 4vw, 3.15rem); background: radial-gradient(ellipse at 100% 60%, #2c2c2c, #161616 78%); }
-.bio-cover figcaption strong { font-size: clamp(3.2rem, 7.7vw, 7rem); font-weight: 800; line-height: .91; letter-spacing: -.09em; }
+.bio-cover figcaption strong { font-size: clamp(2.5rem, 6.2vw, 6rem); font-weight: 800; line-height: .91; letter-spacing: -.09em; }
 .bio-cover figcaption span { color: #d2d2d2; }
-.bio-portrait { position: relative; aspect-ratio: 1.06; overflow: hidden; background: #333333; }
-.bio-portrait img { position: absolute; display: block; width: 120%; height: auto; max-width: none; top: -2%; left: -10%; filter: grayscale(1); }
-.bio-portrait::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, #0004, transparent 18%), linear-gradient(0deg, #0008, transparent 14%); pointer-events: none; }
+.bio-portrait { display: grid; align-items: center; background: #161616; }
+.bio-portrait img { display: block; width: 100%; height: auto; filter: grayscale(1); }
 .bio-copy { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, .7fr); gap: clamp(1.5rem, 5vw, 4rem); padding-top: clamp(2.3rem, 6vw, 4rem); }
 .bio-copy h2 { font-size: clamp(2.35rem, 4.8vw, 4rem); }
 .bio-copy p { margin-top: .9rem; color: var(--muted); line-height: 1.7; }
