@@ -63,10 +63,12 @@ nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
 .model { min-width: 0; color: #eeeeee; background: var(--dark); border: 1px solid var(--line); border-radius: .32rem; overflow: hidden; }
 .model-bar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .5rem 1rem; min-height: 2.9rem; padding: .65rem .88rem; font-size: .87rem; }
 .model-bar .meta, .model-bar a { color: var(--accent); }
-.model-bar button { padding: 0; border: 0; background: transparent; color: inherit; cursor: pointer; text-decoration: underline; text-underline-offset: .22em; }
+.model-controls { display: flex; flex-wrap: wrap; gap: .35rem; }
+.model-controls button { min-height: 2rem; padding: .22rem .55rem; border: 1px solid #626262; border-radius: .2rem; background: transparent; color: inherit; cursor: pointer; }
+.model-controls button:hover { background: #eeeeee; color: #181818; }
 .model-bar:first-child { border-bottom: 1px solid #484848; }
 .model-bar:last-child { border-top: 1px solid #484848; }
-canvas { display: block; width: 100%; aspect-ratio: 1.28; background: radial-gradient(ellipse at 51% 52%, #333333, #181818 74%); touch-action: pan-y; cursor: grab; }
+canvas { display: block; width: 100%; aspect-ratio: 1.28; background: radial-gradient(ellipse at 50% 49%, #252525, #101010 80%); touch-action: pan-y; cursor: grab; }
 canvas:active { cursor: grabbing; }
 
 .work { padding-block: clamp(2rem, 6vw, 4.5rem) clamp(2.5rem, 7vw, 5.2rem); border-top: 1px solid var(--line); }
